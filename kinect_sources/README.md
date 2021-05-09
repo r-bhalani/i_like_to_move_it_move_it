@@ -1,6 +1,6 @@
 # kinect_sources
 
-Output from the Azure Kinect Body Tracking SDK read in from the bideo files
+Output from the Azure Kinect Body Tracking SDK read in from the video files
 
 Text in the .bt files are in the following format:
 
