@@ -5,7 +5,7 @@ Also provides a Python interface to the joints and some walk capabilities.
 
 These have been tested in simulation and need some work to be used on the real robot, do not use as-is.
 
-![Darwin model in Gazebo](/darwin.png?raw=true "Darwin model in Gazebo")
+![Darwin model in Gazebo](/humanoid_scripts/darwin.png?token=ASSVQBB76ELN55QWXJNNONDATDBM4 "Darwin model in Gazebo")
 
 ## Tutorial
 
