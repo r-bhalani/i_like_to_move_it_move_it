@@ -1,7 +1,8 @@
 ToDo
 
 Code
-If statements - Finish by Sunday night
+~~If statements - Finish by Sunday night~~
+Comment through our code - good documentation
 
 Presentation
 Graph
