@@ -1,7 +1,7 @@
 ToDo
 
 Code
-~~If statements - Finish by Sunday night~~
+DONE - If statements - Finish by Sunday night
 Comment through our code - good documentation
 
 Presentation
