@@ -13,11 +13,7 @@
 
   <include file="$(find darwin_control)/launch/darwin_control.launch"/>
 
-  <node name="darwin_walker" pkg="darwin_gazebo" type="walker.py" />
-
-
-
-
+  <!-- <node name="darwin_walker" pkg="darwin_gazebo" type="walker.py" /> -->
 
 
 </launch>
