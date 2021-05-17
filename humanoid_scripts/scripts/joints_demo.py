@@ -29,26 +29,32 @@ if __name__=="__main__":
     s = 0
     a = 0
     roof = False
+    debug = False   #for debugging; prints out commands
     m.move_arms('down', 'med', 1)
-    print("m.move_arms('down', 'med', 1)")
+    if debug:
+      print("m.move_arms('down', 'med', 1)")
     for frame in data:
       # figure out how to do the i lol
       # checking for raise the roof
       if frame[6][5] < -1 and frame[13][5] > 0.7:
         # start the raise the roof here - going up
         m.reset_legs(1)
-        print("m.reset_legs(1)")
+        if debug:
+          print("m.reset_legs(1)")
         m.raise_roof(1, 1.5, 1.5)
-        print("m.raise_roof(1)")
+        if debug:
+          print("m.raise_roof(1)")
         roof = True
         if frame[7][1] > -550 and frame[7][1] < -400:
           if frame[14][1] > -550 and frame[14][1] < -400:
             m.move_arms('up', 'high', 1)
-            print("m.move_arms('up', 'high', 1)")
+            if debug:
+              print("m.move_arms('up', 'high', 1)")
       elif frame[7][1] < -300 and frame[14][1] < -300:
         if a == 0:
           m.move_arms('up', 'med', 0)
-          print("m.move_arms('up', 'med', 0)")
+          if debug:
+            print("m.move_arms('up', 'med', 0)")
           a = 1
         if a > 0:
           a += 1
@@ -59,14 +65,16 @@ if __name__=="__main__":
         # (since raise roof automatically lowers arms)
         if roof == False:
           m.move_arms('down', 'low', 0.3)
-          print("m.move_arms('down', 'low', 0.3)")
+          if debug:
+            print("m.move_arms('down', 'low', 0.3)")
         # resets roof to false since the arms have been lowered
         roof = False
       if s == 0:
         if frame[19][2] < -100 and frame[23][2] < -100:
           if frame[19][1] > 0 and frame[23][1] > 0:
             m.squat(1)
-            print("m.squat(1)")
+            if debug:
+              print("m.squat(1)")
             s = 1
       if s > 0:
         s += 1
@@ -76,19 +84,12 @@ if __name__=="__main__":
     #m.reset_all(0)
     m.reset_all(1)
     m.move_arms('down','high',1)
-    print("m.reset_all(1)")
+    if debug:
+      print("m.reset_all(1)")
+    
 
 
-#our hardcode
-    #m.move_arms('down', 'med', 1)
-    #m.move_arms('up', 'med',0)
-    #m.squat(1)
-   # m.move_arms('down', 'low',0.3)
-    #m.reset_legs(1)
-   # m.raise_roof(1)
-    #m.move_arms('up', 'high',1)
-    #m.squat(1)
-    #m.reset_all(1)
     rospy.loginfo("Darwin Joints Demo Finished")
+  
 
-
+   

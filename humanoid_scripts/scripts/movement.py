@@ -84,11 +84,11 @@ class Movement:
 
     def kick(self, leg,rest):
         if leg == 'r':
-            self.d.set_angles({"j_thigh2_r": -1})
+            self.d.set_angles({"j_thigh2_r": -1.5})
             self.r.sleep(1)
             self.d.set_angles({"j_thigh2_r": 0})
         if leg == 'l':
-            self.d.set_angles({"j_thigh2_l": -1})
+            self.d.set_angles({"j_thigh2_l": -1.5})
             self.r.sleep(1)
             self.d.set_angles({"j_thigh2_l": 0})
         self.r.sleep(rest)
